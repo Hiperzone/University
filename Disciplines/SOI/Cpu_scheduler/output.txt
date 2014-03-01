@@ -1,0 +1,534 @@
+Ciclo: 0
+Processo id=0 estado=NEW 
+Processo id=0 wait cycles=0 
+--------------------------------------------------------------
+Ciclo: 1
+Processo id=0 estado=WAIT/READY 
+Processo id=0 wait cycles=0 
+--------------------------------------------------------------
+Ciclo: 2
+Processo id=1 estado=NEW 
+Processo id=0 estado=RUN 
+Processo id=1 wait cycles=0 
+Processo id=0 wait cycles=1 
+--------------------------------------------------------------
+Ciclo: 3
+Processo id=2 estado=NEW 
+Processo id=1 estado=WAIT/READY 
+Processo id=0 estado=RUN 
+Processo id=2 wait cycles=0 
+Processo id=1 wait cycles=0 
+Processo id=0 wait cycles=1 
+--------------------------------------------------------------
+Ciclo: 4
+Processo id=1 estado=WAIT/READY 
+Processo id=2 estado=WAIT/READY 
+Processo id=0 estado=RUN 
+Processo id=1 wait cycles=1 
+Processo id=2 wait cycles=0 
+Processo id=0 wait cycles=1 
+--------------------------------------------------------------
+Ciclo: 5
+Processo id=1 estado=WAIT/READY 
+Processo id=2 estado=WAIT/READY 
+Processo id=0 estado=RUN 
+Processo id=1 wait cycles=2 
+Processo id=2 wait cycles=1 
+Processo id=0 wait cycles=1 
+--------------------------------------------------------------
+Ciclo: 6
+Processo id=1 estado=WAIT/READY 
+Processo id=2 estado=WAIT/READY 
+Processo id=0 estado=WAIT/READY 
+Processo id=1 wait cycles=3 
+Processo id=2 wait cycles=2 
+Processo id=0 wait cycles=1 
+--------------------------------------------------------------
+Ciclo: 7
+Processo id=2 estado=WAIT/READY 
+Processo id=0 estado=WAIT/READY 
+Processo id=1 estado=RUN 
+Processo id=2 wait cycles=3 
+Processo id=0 wait cycles=2 
+Processo id=1 wait cycles=4 
+--------------------------------------------------------------
+Ciclo: 8
+Processo id=2 estado=WAIT/READY 
+Processo id=0 estado=WAIT/READY 
+Processo id=1 estado=RUN 
+Processo id=2 wait cycles=4 
+Processo id=0 wait cycles=3 
+Processo id=1 wait cycles=4 
+--------------------------------------------------------------
+Ciclo: 9
+Processo id=2 estado=WAIT/READY 
+Processo id=0 estado=WAIT/READY 
+Processo id=1 estado=BLOCKED 
+Processo id=2 wait cycles=5 
+Processo id=0 wait cycles=4 
+Processo id=1 wait cycles=4 
+--------------------------------------------------------------
+Ciclo: 10
+Processo id=0 estado=WAIT/READY 
+Processo id=2 estado=RUN 
+Processo id=1 estado=BLOCKED 
+Processo id=0 wait cycles=5 
+Processo id=2 wait cycles=6 
+Processo id=1 wait cycles=4 
+--------------------------------------------------------------
+Ciclo: 11
+Processo id=0 estado=WAIT/READY 
+Processo id=2 estado=RUN 
+Processo id=1 estado=BLOCKED 
+Processo id=0 wait cycles=6 
+Processo id=2 wait cycles=6 
+Processo id=1 wait cycles=4 
+--------------------------------------------------------------
+Ciclo: 12
+Processo id=0 estado=WAIT/READY 
+Processo id=2 estado=RUN 
+Processo id=1 estado=BLOCKED 
+Processo id=0 wait cycles=7 
+Processo id=2 wait cycles=6 
+Processo id=1 wait cycles=4 
+--------------------------------------------------------------
+Ciclo: 13
+Processo id=0 estado=WAIT/READY 
+Processo id=2 estado=RUN 
+Processo id=1 estado=BLOCKED 
+Processo id=0 wait cycles=8 
+Processo id=2 wait cycles=6 
+Processo id=1 wait cycles=4 
+--------------------------------------------------------------
+Ciclo: 14
+Processo id=0 estado=WAIT/READY 
+Processo id=2 estado=WAIT/READY 
+Processo id=1 estado=BLOCKED 
+Processo id=0 wait cycles=9 
+Processo id=2 wait cycles=6 
+Processo id=1 wait cycles=4 
+--------------------------------------------------------------
+Ciclo: 15
+Processo id=2 estado=WAIT/READY 
+Processo id=0 estado=RUN 
+Processo id=1 estado=BLOCKED 
+Processo id=2 wait cycles=7 
+Processo id=0 wait cycles=10 
+Processo id=1 wait cycles=4 
+--------------------------------------------------------------
+Ciclo: 16
+Processo id=2 estado=WAIT/READY 
+Processo id=1 estado=WAIT/READY 
+Processo id=0 estado=BLOCKED 
+Processo id=2 wait cycles=8 
+Processo id=1 wait cycles=4 
+Processo id=0 wait cycles=10 
+--------------------------------------------------------------
+Ciclo: 17
+Processo id=1 estado=WAIT/READY 
+Processo id=2 estado=RUN 
+Processo id=0 estado=BLOCKED 
+Processo id=1 wait cycles=5 
+Processo id=2 wait cycles=9 
+Processo id=0 wait cycles=10 
+--------------------------------------------------------------
+Ciclo: 18
+Processo id=1 estado=WAIT/READY 
+Processo id=2 estado=RUN 
+Processo id=0 estado=BLOCKED 
+Processo id=1 wait cycles=6 
+Processo id=2 wait cycles=9 
+Processo id=0 wait cycles=10 
+--------------------------------------------------------------
+Ciclo: 19
+Processo id=1 estado=WAIT/READY 
+Processo id=2 estado=RUN 
+Processo id=0 estado=BLOCKED 
+Processo id=1 wait cycles=7 
+Processo id=2 wait cycles=9 
+Processo id=0 wait cycles=10 
+--------------------------------------------------------------
+Ciclo: 20
+Processo id=1 estado=WAIT/READY 
+Processo id=0 estado=BLOCKED 
+Processo id=2 estado=BLOCKED 
+Processo id=1 wait cycles=8 
+Processo id=0 wait cycles=10 
+Processo id=2 wait cycles=9 
+--------------------------------------------------------------
+Ciclo: 21
+Processo id=1 estado=RUN 
+Processo id=0 estado=BLOCKED 
+Processo id=2 estado=BLOCKED 
+Processo id=1 wait cycles=9 
+Processo id=0 wait cycles=10 
+Processo id=2 wait cycles=9 
+--------------------------------------------------------------
+Ciclo: 22
+Processo id=1 estado=RUN 
+Processo id=0 estado=BLOCKED 
+Processo id=2 estado=BLOCKED 
+Processo id=1 wait cycles=9 
+Processo id=0 wait cycles=10 
+Processo id=2 wait cycles=9 
+--------------------------------------------------------------
+Ciclo: 23
+Processo id=0 estado=WAIT/READY 
+Processo id=1 estado=RUN 
+Processo id=2 estado=BLOCKED 
+Processo id=0 wait cycles=10 
+Processo id=1 wait cycles=9 
+Processo id=2 wait cycles=9 
+--------------------------------------------------------------
+Ciclo: 24
+Processo id=0 estado=WAIT/READY 
+Processo id=1 estado=RUN 
+Processo id=2 estado=BLOCKED 
+Processo id=0 wait cycles=11 
+Processo id=1 wait cycles=9 
+Processo id=2 wait cycles=9 
+--------------------------------------------------------------
+Ciclo: 25
+Processo id=0 estado=WAIT/READY 
+Processo id=1 estado=WAIT/READY 
+Processo id=2 estado=BLOCKED 
+Processo id=0 wait cycles=12 
+Processo id=1 wait cycles=9 
+Processo id=2 wait cycles=9 
+--------------------------------------------------------------
+Ciclo: 26
+Processo id=1 estado=WAIT/READY 
+Processo id=0 estado=RUN 
+Processo id=2 estado=BLOCKED 
+Processo id=1 wait cycles=10 
+Processo id=0 wait cycles=13 
+Processo id=2 wait cycles=9 
+--------------------------------------------------------------
+Ciclo: 27
+Processo id=1 estado=WAIT/READY 
+Processo id=2 estado=WAIT/READY 
+Processo id=0 estado=RUN 
+Processo id=1 wait cycles=11 
+Processo id=2 wait cycles=9 
+Processo id=0 wait cycles=13 
+--------------------------------------------------------------
+Ciclo: 28
+Processo id=1 estado=WAIT/READY 
+Processo id=2 estado=WAIT/READY 
+Processo id=0 estado=BLOCKED 
+Processo id=1 wait cycles=12 
+Processo id=2 wait cycles=10 
+Processo id=0 wait cycles=13 
+--------------------------------------------------------------
+Ciclo: 29
+Processo id=2 estado=WAIT/READY 
+Processo id=1 estado=RUN 
+Processo id=0 estado=BLOCKED 
+Processo id=2 wait cycles=11 
+Processo id=1 wait cycles=13 
+Processo id=0 wait cycles=13 
+--------------------------------------------------------------
+Ciclo: 30
+Processo id=2 estado=WAIT/READY 
+Processo id=0 estado=BLOCKED 
+Processo id=1 estado=BLOCKED 
+Processo id=2 wait cycles=12 
+Processo id=0 wait cycles=13 
+Processo id=1 wait cycles=13 
+--------------------------------------------------------------
+Ciclo: 31
+Processo id=2 estado=RUN 
+Processo id=0 estado=BLOCKED 
+Processo id=1 estado=BLOCKED 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=13 
+Processo id=1 wait cycles=13 
+--------------------------------------------------------------
+Ciclo: 32
+Processo id=2 estado=RUN 
+Processo id=0 estado=BLOCKED 
+Processo id=1 estado=BLOCKED 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=13 
+Processo id=1 wait cycles=13 
+--------------------------------------------------------------
+Ciclo: 33
+Processo id=2 estado=RUN 
+Processo id=0 estado=BLOCKED 
+Processo id=1 estado=BLOCKED 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=13 
+Processo id=1 wait cycles=13 
+--------------------------------------------------------------
+Ciclo: 34
+Processo id=2 estado=RUN 
+Processo id=0 estado=BLOCKED 
+Processo id=1 estado=BLOCKED 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=13 
+Processo id=1 wait cycles=13 
+--------------------------------------------------------------
+Ciclo: 35
+Processo id=0 estado=WAIT/READY 
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 wait cycles=13 
+Processo id=1 wait cycles=13 
+Processo id=2 wait cycles=13 
+--------------------------------------------------------------
+Ciclo: 36
+Processo id=0 estado=RUN 
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 wait cycles=14 
+Processo id=1 wait cycles=13 
+Processo id=2 wait cycles=13 
+--------------------------------------------------------------
+Ciclo: 37
+Processo id=0 estado=RUN 
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 wait cycles=14 
+Processo id=1 wait cycles=13 
+Processo id=2 wait cycles=13 
+--------------------------------------------------------------
+Ciclo: 38
+Processo id=0 estado=RUN 
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 wait cycles=14 
+Processo id=1 wait cycles=13 
+Processo id=2 wait cycles=13 
+--------------------------------------------------------------
+Ciclo: 39
+Processo id=0 estado=RUN 
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 wait cycles=14 
+Processo id=1 wait cycles=13 
+Processo id=2 wait cycles=13 
+--------------------------------------------------------------
+Ciclo: 40
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=13 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 41
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=13 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 42
+Processo id=1 estado=WAIT/READY 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=13 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 43
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=14 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 44
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=14 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 45
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=14 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 46
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=14 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 47
+Processo id=1 estado=WAIT/READY 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=14 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 48
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=15 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 49
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=15 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 50
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=15 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 51
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=15 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 52
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=15 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 53
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=15 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 54
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=15 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 55
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=15 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 56
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=15 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 57
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=15 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 58
+Processo id=1 estado=BLOCKED 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=15 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 59
+Processo id=1 estado=WAIT/READY 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=15 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 60
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=16 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 61
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=16 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 62
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=16 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 63
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=16 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 64
+Processo id=1 estado=WAIT/READY 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=16 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 65
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=17 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 66
+Processo id=1 estado=RUN 
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 wait cycles=17 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+--------------------------------------------------------------
+Ciclo: 67
+Processo id=2 estado=EXIT 
+Processo id=0 estado=EXIT 
+Processo id=1 estado=EXIT 
+Processo id=2 wait cycles=13 
+Processo id=0 wait cycles=14 
+Processo id=1 wait cycles=17 
+-------------------------------BUILD SUCCESSFUL (total time: 3 minutes 14 seconds)

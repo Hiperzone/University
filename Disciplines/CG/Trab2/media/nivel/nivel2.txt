@@ -1,0 +1,914 @@
+////////////////////////////////////////////////
+// CARREGAMENTO DE NIVEL
+// NOTAS
+// Para activar o calculo de normais, por a normal a 0 0 0 ou omitir
+// Suporte para rotacoes e translacao para a origem done
+///////////////////////////////////////////////
+VERSION: 2
+
+CAMERA_EYE: 1 0 0
+
+COLISION_MAP
+16 17 0
+BBBBBBBBBBBBBBBB
+BRPPPBBSPPBPPPAB
+BPPPPPBBPPBPPPPB
+BBPPBBBBPPBPPBBB
+BBPPPPPPPPBPPBBB
+BBPPBBBBPPBPPBBB
+BBPPBBBBPPPPPPBB
+BBPPBBBBPPBDDDBB
+BBPPPPPPPPPPPPBB
+BBPPBBBBBBBBBBBB
+BBPPBBBBBBBBBBBB
+BBPPPPPPPPPPPPBB
+BBBBBBBBBBBBPPBB
+BBVVBBBBBBBBPPBB
+BBPPBBBBBBBBPPBB
+BBPPPPPPPPPPPPBB
+BBBBBBBBBBBBBBBB
+ENDCM
+
+TEXTURES
+	TEXTURE: chao1.bmp
+	TEXTURE: uevora.bmp
+	TEXTURE: casa1_parede1.bmp
+	TEXTURE: casa1_parede2.bmp
+	TEXTURE: casa1_parede3.bmp
+	TEXTURE: casa1_telhado.bmp
+ENDTEXTURES
+
+MATERIALS
+
+	MATERIAL
+		NAME: material_chao1
+		SHININESS: 100
+		SPECULAR: 0.0 0.0 0.0 1.0
+		DIFFUSE: 1.0 1.0 1.0 1.0
+		AMBIENT: 0.3 0.2 0.2 1.0
+		POSITION: 0 0 1 1
+		DIRECTION: 0 0 1
+	ENDMATERIAL
+
+	MATERIAL
+		NAME: material_chao_amarelo
+		SHININESS: 60.0
+		SPECULAR: 0.0 0.0 0.0 1.0
+		DIFFUSE: 1.0 1.0 0.0 1.0
+		AMBIENT: 1.0 1.0 0.0 1.0
+		POSITION: 0 0 1 1
+		DIRECTION: 0 0 1
+	ENDMATERIAL
+
+	MATERIAL
+		NAME: material_chao_vermelho
+		SHININESS: 100.0
+		SPECULAR: 0.0 0.0 0.0 1.0
+		DIFFUSE: 1.0 0.0 0.0 1.0
+		AMBIENT: 1.0 0.0 0.0 1.0
+		POSITION: 0 0 1 1
+		DIRECTION: 0 0 1
+	ENDMATERIAL
+
+	MATERIAL
+		NAME: material_chao_verde
+		SHININESS: 100.0
+		SPECULAR: 0.0 0.0 0.0 1.0
+		DIFFUSE: 0.0 1.0 0.0 1.0
+		AMBIENT: 0.0 1.0 0.0 1.0
+		POSITION: 0 0 1 1
+		DIRECTION: 0 0 1
+	ENDMATERIAL
+
+	MATERIAL
+		NAME: material_chao_azul
+		SHININESS: 100.0
+		SPECULAR: 0.0 0.0 0.0 1.0
+		DIFFUSE: 0.0 0.0 1.0 1.0
+		AMBIENT: 0.0 0.0 1.0 1.0
+		POSITION: 0 0 1 1
+		DIRECTION: 0 0 1
+	ENDMATERIAL
+
+
+   	 MATERIAL
+		NAME: material_casa
+		SHININESS: 100.0
+		SPECULAR: 0.0 0.0 0.0 1.0
+		DIFFUSE: 1.0 1.0 1.0 1.0
+		AMBIENT: 0.2 0.2 0.2 1.0
+		POSITION: 0 0 1 1
+		DIRECTION: 0 0 1
+	ENDMATERIAL
+    	MATERIAL
+		NAME: material_porta
+		SHININESS: 60.0
+		SPECULAR: 1.0 1.0 1.0 1.0
+		DIFFUSE: 0.8 0.8 0.8 1.0
+		AMBIENT: 0.2 0.2 0.2 1.0
+		POSITION: 0 0 1 1
+		DIRECTION: 0 0 1
+	ENDMATERIAL
+
+ENDMATERIALS
+
+
+//skybox
+Model
+	ID: Q
+	BASE_MODEL_ID: -1
+	NAME: SKYBOX
+	DATA
+		//BUTTOM, normal para baixo
+		QUAD
+            		N: 0 0 -1
+			C: 1.0 0.0 0.0
+			V1: 15 0 0
+			V2: 15 15 0
+			V3: 0 15 0
+			V4: 0 0 0		
+		ENDQ
+
+		//TOP
+		QUAD
+  
+			N: 0 0 1
+			C: 1.0 0.0 0.0
+			V1: 15 0 15
+			V2: 15 15 15
+			V3: 0 15 15
+			V4: 0 0 15		
+		ENDQ
+		//LEFT
+		QUAD
+			N: 0 -1 0
+			C: 1.0 0.0 0.0
+			V1: 15 0 0
+			V2: 0 0 0
+			V3: 0 0 15
+			V4: 15 0 15		
+		ENDQ
+		//DIR
+		QUAD
+
+			N: 0 1 0
+			C: 1.0 0.0 0.0
+			V1: 15 15 0
+			V2: 0 15 0
+			V3: 0 15 15
+			V4: 15 15 15	
+		ENDQ
+		//FRENTE
+		QUAD
+			N: 1 0 0
+			C: 1.0 0.0 0.0
+			V1: 15 0 0
+			V2: 15 15 0
+			V3: 15 15 15
+			V4: 15 0 15		
+		ENDQ
+		//TRAS
+		QUAD
+  
+			N: -1 0 0
+			C: 1.0 0.0 0.0
+			V1: 0 0 0
+			V2: 0 15 0
+			V3: 0 15 15
+			V4: 0 0 15		
+		ENDQ
+
+	ENDD
+ENDM
+
+//modelo da rampa
+Model
+	ID: I
+	BASE_MODEL_ID: -1
+	NAME: RAMPA1
+
+	DATA
+		QUAD
+            		MATERIAL: material_chao1
+			TEXTURE: chao1.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 0.5
+			UV3: 0 0.5
+			UV4: 0 0
+			N: 0 1 1
+			V1: 1 0 0.5
+			V2: 1 1 0
+			V3: 0 1 0
+			V4: 0 0 0.5		
+		ENDQ
+	 	QUAD
+            		MATERIAL: material_chao1
+			TEXTURE: chao1.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 0.5
+			UV3: 0 0.5
+			UV4: 0 0
+			N: 0 1 1
+			TRANS_AJUSTADA: 0 -1 0
+			V1: 1 0 1
+			V2: 1 1 0.5
+			V3: 0 1 0.5
+			V4: 0 0 1		
+		ENDQ
+	ENDD	
+ENDM
+
+//modelo da porta
+Model
+	ID: P
+	//usar o modelo do chao como auxiliar para quando a porta abrir ficar o chao
+	BASE_MODEL_ID: C
+	NAME: PORTA1
+	X: 0
+	Y: 0
+	Z: 0
+	NUM_QUADS: 6
+	ROTATION: 0 0 1
+	FLAGS: 0x01
+
+	ANIMATION
+		EVENT: EVENT_KEY_PRESSED
+		TIME_TO_LIVE: 1000
+		INCREMENT_X: -0.01
+		INCREMENT_Y: 0
+		INCREMENT_Z: 0
+		DISTANCE_TO_MOVE_X: 1
+		DISTANCE_TO_MOVE_Y: 0
+		DISTANCE_TO_MOVE_Z: 0
+	ENDANIM
+	DATA
+		//BUTTOM, normal para baixo
+		QUAD
+            	MATERIAL: material_porta 
+            	N: 0 0 -1
+			C: 1.0 1.0 1.0
+			V1: 1 0 0
+			V2: 1 0.2 0
+			V3: 0 0.2 0
+			V4: 0 0 0		
+		ENDQ
+
+		//TOP
+		QUAD
+            	MATERIAL: material_porta
+			N: 0 0 1
+			C: 1.0 1.0 1.0
+			V1: 1 0 1
+			V2: 1 0.2 1
+			V3: 0 0.2 1
+			V4: 0 0 1		
+		ENDQ
+		//LEFT
+		QUAD
+            	MATERIAL: material_porta
+			N: 0 -1 0
+			C: 1.0 1.0 1.0
+			V1: 1 0 0
+			V2: 0 0 0
+			V3: 0 0 1
+			V4: 1 0 1		
+		ENDQ
+		//DIR
+		QUAD
+            	MATERIAL: material_porta
+			N: 0 1 0
+			C: 1.0 1.0 1.0
+			V1: 1 0.2 0
+			V2: 0 0.2 0
+			V3: 0 0.2 1
+			V4: 1 0.2 1		
+		ENDQ
+		//FRENTE
+		QUAD
+            	MATERIAL: material_porta
+			N: 1 0 0
+			C: 1.0 1.0 1.0
+			V1: 1 0 0
+			V2: 1 0.2 0
+			V3: 1 0.2 1
+			V4: 1 0 1		
+		ENDQ
+		//TRAS
+		QUAD
+            	MATERIAL: material_porta
+			N: -1 0 0
+			C: 1.0 1.0 1.0
+			V1: 0 0 0
+			V2: 0 0.2 0
+			V3: 0 0.2 1
+			V4: 0 0 1		
+		ENDQ		
+	ENDD	
+ENDM
+
+
+//modelo do chao no primeiro andar
+Model
+	ID: F
+	BASE_MODEL_ID: -1
+	NAME: CHAO1_FLOOR1
+	X: 0
+	Y: 0
+	Z: 0
+	NUM_QUADS: 1
+	ROTATION: 0 0 1
+	DATA
+		QUAD
+            MATERIAL: material_chao1
+			TEXTURE: uevora.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 1
+			UV3: 0 1
+			UV4: 0 0
+			N: 0 0 1
+			V1: 1 0 0
+			V2: 1 1 0
+			V3: 0 1 0
+			V4: 0 0 0		
+		ENDQ
+	ENDD	
+ENDM
+
+//modelo do chao
+Model
+	ID: C
+	BASE_MODEL_ID: -1
+	NAME: CHAO1
+	DATA
+		QUAD
+            		MATERIAL: material_chao1
+			TEXTURE: chao1.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 1
+			UV3: 0 1
+			UV4: 0 0
+			N: 0 0 1
+			V1: 1 0 0
+			V2: 1 1 0
+			V3: 0 1 0
+			V4: 0 0 0		
+		ENDQ
+	ENDD	
+ENDM
+
+Model
+	ID: S
+	BASE_MODEL_ID: -1
+	NAME: CHAO_AMARELO
+	X: 0
+	Y: 0
+	Z: 0
+	NUM_QUADS: 1
+	ROTATION: 0 0 1
+	DATA
+		QUAD
+            MATERIAL: material_chao_amarelo
+			TEXTURE: uevora.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 1
+			UV3: 0 1
+			UV4: 0 0
+			N: 0 0 1
+			V1: 1 0 0
+			V2: 1 1 0
+			V3: 0 1 0
+			V4: 0 0 0		
+		ENDQ
+	ENDD	
+ENDM
+
+Model
+	ID: T
+	BASE_MODEL_ID: -1
+	NAME: CHAO_VERMELHO_FLOOR1
+	X: 0
+	Y: 0
+	Z: 0
+	NUM_QUADS: 1
+	ROTATION: 0 0 1
+	DATA
+		QUAD
+            MATERIAL: material_chao_vermelho
+			TEXTURE: uevora.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 1
+			UV3: 0 1
+			UV4: 0 0
+			N: 0 0 1
+			V1: 1 0 0
+			V2: 1 1 0
+			V3: 0 1 0
+			V4: 0 0 0		
+		ENDQ
+	ENDD	
+ENDM
+
+Model
+	ID: U
+	BASE_MODEL_ID: -1
+	NAME: CHAO_AZUL
+	X: 0
+	Y: 0
+	Z: 0
+	NUM_QUADS: 1
+	ROTATION: 0 0 1
+	DATA
+		QUAD
+            MATERIAL: material_chao_azul
+			TEXTURE: uevora.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 1
+			UV3: 0 1
+			UV4: 0 0
+			N: 0 0 1
+			V1: 1 0 0
+			V2: 1 1 0
+			V3: 0 1 0
+			V4: 0 0 0		
+		ENDQ
+	ENDD	
+ENDM
+
+Model
+	ID: V
+	BASE_MODEL_ID: -1
+	NAME: CHAO_VERDE
+	X: 0
+	Y: 0
+	Z: 0
+	NUM_QUADS: 1
+	ROTATION: 0 0 1
+	DATA
+		QUAD
+            MATERIAL: material_chao_verde
+			TEXTURE: uevora.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 1
+			UV3: 0 1
+			UV4: 0 0
+			N: 0 0 1
+			V1: 1 0 0
+			V2: 1 1 0
+			V3: 0 1 0
+			V4: 0 0 0		
+		ENDQ
+	ENDD	
+ENDM
+
+
+Model
+	ID: D
+	BASE_MODEL_ID: -1
+	NAME: CASA_1_BASE
+	X: 0
+	Y: 0
+	Z: 0
+	NUM_QUADS: 9
+	ROTATION: 0 0 1
+	DATA
+		QUAD
+			//Buttom
+			//nao tem textura visto que nao e visivel
+            		MATERIAL: material_casa
+			C: 1.0 1.0 1.0
+			UV: 0 0 0
+			N: 0 0 -1
+			R: 0 0 0 0
+			V1: 1 0 0
+			V2: 1 1 0
+			V3: 0 1 0
+			V4: 0 0 0		
+		ENDQ
+		
+		QUAD
+			//esquerda
+            		MATERIAL: material_casa
+			TEXTURE: casa1_parede1.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 0.5
+			UV3: 0 0.5
+			UV4: 0 0
+			N: 0 0 1
+			R: 90 1 0 0
+			V1: 1 0 0
+			V2: 1 0.5 0
+			V3: 0 0.5 0
+			V4: 0 0 0			
+		ENDQ
+		QUAD
+			//direita
+            		MATERIAL: material_casa
+			TEXTURE: casa1_parede1.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 0.5
+			UV3: 0 0.5
+			UV4: 0 0
+			N: 0 0 -1
+			TRANS_AJUSTADA: 0 1 0
+			R: 90 1 0 0
+			V1: 1 0 0
+			V2: 1 0.5 0
+			V3: 0 0.5 0
+			V4: 0 0 0		
+		ENDQ
+
+		QUAD
+			//tras
+           		 MATERIAL: material_casa
+			TEXTURE: casa1_parede2.bmp
+			C: 1.0 1.0 1.0
+			UV1: 0.5 0.5	
+			UV2: 1.0 1.0
+			UV3: 1 0
+			UV4: 0.5 0
+			N: 0 0 1
+			TRANS_ORIGEM: 0 0 0 
+			R: -90 0 1 0
+			V1: 0.5 0 0
+			V2: 1 0.5 0
+			V3: 0 0.5 0
+			V4: 0 0 0	
+		ENDQ
+
+		QUAD
+			//frente
+            		MATERIAL: material_casa
+			TEXTURE: casa1_parede2.bmp
+			C: 1.0 1.0 1.0
+			UV1: 0.5 0.5	
+			UV2: 1.0 1.0
+			UV3: 1 0
+			UV4: 0.5 0
+			N: 0 0 -1
+			TRANS_ORIGEM: 0 0 0 
+			TRANS_AJUSTADA: 1 0 0
+			R: -90 0 1 0
+			V1: 0.5 0 0
+			V2: 1 0.5 0
+			V3: 0 0.5 0
+			V4: 0 0 0
+		ENDQ
+
+		QUAD
+			//topo
+            		MATERIAL: material_casa
+			TEXTURE: casa1_telhado.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 1
+			UV3: 0 1
+			UV4: 0 0
+			N: 0 0 1
+			TRANS_ORIGEM: 0 0 0 
+			TRANS_AJUSTADA: 0 0 0.5
+			R:  45 1 0 0
+			V1: 1 0 0
+			V2: 1 0.71 0
+			V3: 0 0.71 0
+			V4: 0 0 0	
+		ENDQ
+		//segunda parte da casa
+		QUAD
+			//topo direito
+            		MATERIAL: material_casa
+			TEXTURE: casa1_telhado.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 1
+			UV3: 0 1
+			UV4: 0 0
+			N: 0 0 1
+			TRANS_ORIGEM: 0 -0.71 0 
+			TRANS_AJUSTADA: 0 0.29 0.5
+			R: -45 1 0 0
+			V1: 1 0 0
+			V2: 1 0.71 0
+			V3: 0 0.71 0
+			V4: 0 0 0
+		ENDQ
+		QUAD
+			//frente direita
+            		MATERIAL: material_casa
+			TEXTURE: casa1_parede2.bmp
+			C: 1.0 1.0 1.0
+			UV1: 0 1	
+			UV2: 0.5 0.5
+			UV3: 0.5 0
+			UV4: 0 0
+			N: 0 0 -1
+			TRANS_ORIGEM: 0 -0.5 0 
+			TRANS_AJUSTADA: 1 0.5 0
+			R: -90 0 1 0
+			V1: 1 0 0
+			V2: 0.5 0.5 0
+			V3: 0 0.5 0
+			V4: 0 0 0
+		ENDQ
+		QUAD
+			//tras direita
+            		MATERIAL: material_casa
+			TEXTURE: casa1_parede2.bmp
+			C: 1.0 1.0 1.0
+			UV1: 0 1	
+			UV2: 0.5 0.5
+			UV3: 0.5 0
+			UV4: 0 0
+			N: 0 0 1
+			TRANS_ORIGEM: 0 0 0
+			TRANS_AJUSTADA: 0 0.5 0
+			R: -90 0 1 0
+			V1: 1 0 0
+			V2: 0.5 0.5 0
+			V3: 0 0.5 0
+			V4: 0 0 0
+		ENDQ
+	ENDD	
+ENDM
+
+Model
+	ID: H
+	BASE_MODEL_ID: -1
+	NAME: CASA_2_BASE
+	X: 0
+	Y: 0
+	Z: 0
+	NUM_QUADS: 9
+	ROTATION: 0 0 1
+	TEXTURE: casa1.bmp
+	DATA
+		
+		//base da casa
+		QUAD
+			//Buttom
+			//nao tem textura visto que nao e visivel
+            		MATERIAL: material_casa
+			C: 1.0 1.0 1.0
+			N: 0 0 -1
+			R: 0 0 0 0
+			V1: 1 0 0
+			V2: 1 1 0
+			V3: 0 1 0
+			V4: 0 0 0		
+		ENDQ
+		
+		QUAD
+			//esquerda
+            	MATERIAL: material_casa
+			TEXTURE: casa1_parede3.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 1
+			UV3: 0 1
+			UV4: 0 0
+			N: 0 0 1
+			R: 90 1 0 0
+			V1: 1 0 0
+			V2: 1 1 0
+			V3: 0 1 0
+			V4: 0 0 0			
+		ENDQ
+		QUAD
+			//direita
+            		MATERIAL: material_casa
+			TEXTURE: casa1_parede3.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 1
+			UV3: 0 1
+			UV4: 0 0
+			N: 0 0 -1
+			TRANS_AJUSTADA: 0 1 0
+			R: 90 1 0 0
+			V1: 1 0 0
+			V2: 1 1 0
+			V3: 0 1 0
+			V4: 0 0 0		
+		ENDQ
+
+		QUAD
+			//tras
+            		MATERIAL: material_casa
+			TEXTURE: casa1_parede3.bmp
+			C: 1.0 1.0 1.0
+			UV1: 0 1	
+			UV2: 1 1
+			UV3: 1 0
+			UV4: 0 0
+			N: 0 0 1
+			TRANS_ORIGEM: 0 0 0 
+			R: -90 0 1 0
+			V1: 1 0 0
+			V2: 1 1 0
+			V3: 0 1 0
+			V4: 0 0 0	
+		ENDQ
+
+		QUAD
+			//frente
+            		MATERIAL: material_casa
+			TEXTURE: casa1_parede3.bmp
+			C: 1.0 1.0 1.0
+			UV1: 0 1	
+			UV2: 1 1
+			UV3: 1 0
+			UV4: 0 0
+			N: 0 0 -1
+			TRANS_ORIGEM: 0 0 0 
+			TRANS_AJUSTADA: 1 0 0
+			R: -90 0 1 0
+			V1: 1 0 0
+			V2: 1 1 0
+			V3: 0 1 0
+			V4: 0 0 0
+		ENDQ
+
+		//segundo andar da casa
+		QUAD
+			//esquerda
+            		MATERIAL: material_casa
+			TEXTURE: casa1_parede1.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 0.5
+			UV3: 0 0.5
+			UV4: 0 0
+			N: 0 0 1
+			TRANS_AJUSTADA: 0 0 1
+			R: 90 1 0 0
+			V1: 1 0 0
+			V2: 1 0.5 0
+			V3: 0 0.5 0
+			V4: 0 0 0			
+		ENDQ
+		QUAD
+			//direita
+            		MATERIAL: material_casa
+			TEXTURE: casa1_parede1.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 0.5
+			UV3: 0 0.5
+			UV4: 0 0
+			N: 0 0 -1
+			TRANS_AJUSTADA: 0 1 1
+			R: 90 1 0 0
+			V1: 1 0 0
+			V2: 1 0.5 0
+			V3: 0 0.5 0
+			V4: 0 0 0		
+		ENDQ
+
+		QUAD
+			//tras
+           		 MATERIAL: material_casa
+			TEXTURE: casa1_parede2.bmp
+			C: 1.0 1.0 1.0
+			UV1: 0.5 0.5	
+			UV2: 1.0 1.0
+			UV3: 1 0
+			UV4: 0.5 0
+			N: 0 0 1
+			TRANS_AJUSTADA: 0 0 1
+			TRANS_ORIGEM: 0 0 0 
+			R: -90 0 1 0
+			V1: 0.5 0 0
+			V2: 1 0.5 0
+			V3: 0 0.5 0
+			V4: 0 0 0	
+		ENDQ
+
+		QUAD
+			//frente
+            		MATERIAL: material_casa
+			TEXTURE: casa1_parede2.bmp
+			C: 1.0 1.0 1.0
+			UV1: 0.5 0.5	
+			UV2: 1.0 1.0
+			UV3: 1 0
+			UV4: 0.5 0
+			N: 0 0 -1
+			TRANS_ORIGEM: 0 0 0 
+			TRANS_AJUSTADA: 1 0 1
+			R: -90 0 1 0
+			V1: 0.5 0 0
+			V2: 1 0.5 0
+			V3: 0 0.5 0
+			V4: 0 0 0
+		ENDQ
+
+		QUAD
+			//topo
+            		MATERIAL: material_casa
+			TEXTURE: casa1_telhado.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 1
+			UV3: 0 1
+			UV4: 0 0
+			N: 0 0 1
+			TRANS_ORIGEM: 0 0 0 
+			TRANS_AJUSTADA: 0 0 1.5
+			R:  45 1 0 0
+			V1: 1 0 0
+			V2: 1 0.71 0
+			V3: 0 0.71 0
+			V4: 0 0 0	
+		ENDQ
+		//segunda parte da casa
+		QUAD
+			//topo direito
+            		MATERIAL: material_casa
+			TEXTURE: casa1_telhado.bmp
+			C: 1.0 1.0 1.0
+			UV1: 1 0	
+			UV2: 1 1
+			UV3: 0 1
+			UV4: 0 0
+			N: 0 0 1
+			TRANS_ORIGEM: 0 -0.71 0 
+			TRANS_AJUSTADA: 0 0.29 1.5
+			R: -45 1 0 0
+			V1: 1 0 0
+			V2: 1 0.71 0
+			V3: 0 0.71 0
+			V4: 0 0 0
+		ENDQ
+		QUAD
+			//frente direita
+            		MATERIAL: material_casa
+			TEXTURE: casa1_parede2.bmp
+			C: 1.0 1.0 1.0
+			UV1: 0 1	
+			UV2: 0.5 0.5
+			UV3: 0.5 0
+			UV4: 0 0
+			N: 0 0 -1
+			TRANS_ORIGEM: 0 -0.5 0 
+			TRANS_AJUSTADA: 1 0.5 1
+			R: -90 0 1 0
+			V1: 1 0 0
+			V2: 0.5 0.5 0
+			V3: 0 0.5 0
+			V4: 0 0 0
+		ENDQ
+		QUAD
+			//tras direita
+            		MATERIAL: material_casa
+			TEXTURE: casa1_parede2.bmp
+			C: 1.0 1.0 1.0
+			UV1: 0 1	
+			UV2: 0.5 0.5
+			UV3: 0.5 0
+			UV4: 0 0
+			N: 0 0 1
+			TRANS_ORIGEM: 0 0 0
+			TRANS_AJUSTADA: 0 0.5 1
+			R: -90 0 1 0
+			V1: 1 0 0
+			V2: 0.5 0.5 0
+			V3: 0 0.5 0
+			V4: 0 0 0
+		ENDQ	
+	ENDD	
+ENDM
+
+
+MODEL_MAP
+DDDDDDDDDDDDDDDH
+DTCCCDDSCCDCCCUD
+DCCCCCDDCCDCCCCD
+DDCCDDDDCCDCCDDH
+DDCCCCCCCCDCCDDH
+DDCCDDHHCCDCCDDH
+DDCCDDDDCCCCCCDH
+DDCCDDDDCCDDDDHH
+DDCCCCCCCCCCCCHH
+DDCCDDDDDDDDCCCH
+NDCCDDDDDDDDCCHH
+NDCCCCCCCCCCCCDD
+NDDDDDDDDDDDCCDD
+NDVVDDDDDDDDCCDH
+NDCCDDDDDDDDCCDH
+NDCCCCCCCCCCCCDH
+NDDDDDDDDDDDDDDD
+ENDMM
+
+
+
+
+
