@@ -1,0 +1,80 @@
+# depslib dependency file v1.0
+1390933214 source:/home/hiperzone/redes/Trabalho2/shared/msg_streamer.c
+	"common.h"
+	"msg_streamer.h"
+
+1390937659 /home/hiperzone/redes/Trabalho2/shared/msg_streamer.h
+	"common.h"
+	<string.h>
+	<stdio.h>
+	<assert.h>
+	<malloc.h>
+
+1390937834 /home/hiperzone/redes/Trabalho2/shared/common.h
+	<inttypes.h>
+	"stdbool.h"
+
+1390930164 source:/home/hiperzone/redes/Trabalho2/Servidor/database.c
+	"../shared/common.h"
+	"database.h"
+	<stdio.h>
+	<string.h>
+	<malloc.h>
+	"LinkedList.h"
+	<assert.h>
+
+1390929858 /home/hiperzone/redes/Trabalho2/Servidor/database.h
+	"LinkedList.h"
+	<time.h>
+
+1390937824 /home/hiperzone/redes/Trabalho2/Servidor/LinkedList.h
+	"stdBool.h"
+
+1390931450 source:/home/hiperzone/redes/Trabalho2/Servidor/LinkedList.c
+	"../shared/common.h"
+	"LinkedList.h"
+	<stdio.h>
+	<malloc.h>
+	<assert.h>
+	<string.h>
+
+1390922278 source:/home/hiperzone/redes/Trabalho2/Servidor/mensagens.c
+	"../shared/common.h"
+	"mensagens.h"
+	<string.h>
+	<stdio.h>
+	<assert.h>
+	<malloc.h>
+	"servidor.h"
+	"database.h"
+	<time.h>
+	"LinkedList.h"
+
+1390919042 /home/hiperzone/redes/Trabalho2/Servidor/mensagens.h
+	"../shared/msg_streamer.h"
+
+1390937911 /home/hiperzone/redes/Trabalho2/Servidor/servidor.h
+	"mensagens.h"
+	<time.h>
+
+1390938143 source:/home/hiperzone/redes/Trabalho2/Servidor/servidor.c
+	"../shared/common.h"
+	<stdio.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<winsock2.h>
+	"win/unistd.h"
+	"servidor.h"
+	"database.h"
+
+1390937405 /home/hiperzone/redes/Trabalho2/Servidor/win/unistd.h
+	<stdlib.h>
+	<io.h>
+	"getopt.h"
+	<process.h>
+
+1390937405 /home/hiperzone/redes/Trabalho2/Servidor/win/getopt.h
+	<ctype.h>
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="cliente" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/cliente" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c99" />
+					<Add option="-g" />
+					<Add option="-Dunix" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/cliente" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c99" />
+		</Compiler>
+		<Unit filename="../shared/common.h" />
+		<Unit filename="../shared/msg_streamer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../shared/msg_streamer.h" />
+		<Unit filename="cliente.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cliente.h" />
+		<Unit filename="consola.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="consola.h" />
+		<Unit filename="mensagens.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mensagens.h" />
+		<Unit filename="sconnection.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sconnection.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

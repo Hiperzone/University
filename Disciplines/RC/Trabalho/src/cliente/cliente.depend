@@ -1,0 +1,77 @@
+# depslib dependency file v1.0
+1390933214 source:/home/hiperzone/redes/Trabalho2/shared/msg_streamer.c
+	"common.h"
+	"msg_streamer.h"
+
+1390937659 /home/hiperzone/redes/Trabalho2/shared/msg_streamer.h
+	"common.h"
+	<string.h>
+	<stdio.h>
+	<assert.h>
+	<malloc.h>
+
+1390922422 source:/home/hiperzone/redes/Trabalho2/cliente/cliente.c
+	"../shared/common.h"
+	"win/unistd.h"
+	"cliente.h"
+	"consola.h"
+
+1390937394 /home/hiperzone/redes/Trabalho2/cliente/win/unistd.h
+	<stdlib.h>
+	<io.h>
+	"getopt.h"
+	<process.h>
+
+1390937394 /home/hiperzone/redes/Trabalho2/cliente/win/getopt.h
+	<ctype.h>
+
+1390918312 /home/hiperzone/redes/Trabalho2/cliente/cliente.h
+	"mensagens.h"
+
+1390934464 /home/hiperzone/redes/Trabalho2/cliente/mensagens.h
+	"../shared/msg_streamer.h"
+
+1390918336 /home/hiperzone/redes/Trabalho2/cliente/consola.h
+
+1390948060 source:/home/hiperzone/redes/Trabalho2/cliente/consola.c
+	"../shared/common.h"
+	"consola.h"
+	"cliente.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"mensagens.h"
+	"sconnection.h"
+	"../shared/msg_streamer.h"
+
+1390918560 /home/hiperzone/redes/Trabalho2/cliente/sconnection.h
+	"../shared/msg_streamer.h"
+
+1390959830 source:/home/hiperzone/redes/Trabalho2/cliente/mensagens.c
+	"../shared/common.h"
+	"mensagens.h"
+	<string.h>
+	<stdio.h>
+	<assert.h>
+	<malloc.h>
+	"cliente.h"
+	"consola.h"
+
+1390920920 /home/hiperzone/redes/Trabalho2/cliente/common.h
+
+1390937834 /home/hiperzone/redes/Trabalho2/shared/common.h
+	<inttypes.h>
+	"stdbool.h"
+
+1390932922 source:/home/hiperzone/redes/Trabalho2/cliente/sconnection.c
+	"../shared/common.h"
+	"sconnection.h"
+	<stdio.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<winsock2.h>
+	"mensagens.h"
+	"cliente.h"
+	"consola.h"
+
