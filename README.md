@@ -23,7 +23,7 @@ PD-----Declarative programming-----------------Prolog
 
 PI-----Programming I---------------------------Python
 
-PII----Programming II--------------------------Python
+PII----Programming II--------------------------Java
 
 RC-----Computer Networks-----------------------C
 
